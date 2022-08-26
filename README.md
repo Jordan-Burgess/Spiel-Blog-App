@@ -7,6 +7,8 @@ A Full Crud Blog App
 - User will be able to create a blog post as well as edit their posts.
 - User will be able to delete any posts that belongs to the user. 
 
+In addition, users will be able to comment and like any posts that they read. 
+
 # Dependencies
 dotenv, mongoose, bcrypt, express, node
 
