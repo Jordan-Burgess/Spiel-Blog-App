@@ -1,5 +1,5 @@
 # Spiel-Blog-App
-A Full Crud Blog App
+Spiel is a Full Crud Blog App that utilizes RESTful routes.
 
 # User Stories
 - A user will be able to register with this app and see top blog posts and users.
