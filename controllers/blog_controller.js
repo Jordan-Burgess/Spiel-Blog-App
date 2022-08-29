@@ -87,3 +87,5 @@ router.put('./blogId', async (req,res) => {
         res.redirect('/404')
     }
 });
+
+modules.exports = router;
