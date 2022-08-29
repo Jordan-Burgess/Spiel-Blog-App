@@ -1,8 +1,8 @@
 const express = require('express');
 const methodOverride = require('method-override');
 const { PromiseProvider } = require('mongoose');
-const session = require('express-session')
-const MongoStore = require('connect-mongo')
+// const session = require('express-session')
+// const MongoStore = require('connect-mongo')
 
 //Make sure this is the right file path
 require('./config/db.connection');

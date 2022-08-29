@@ -12,7 +12,7 @@ In addition, users will be able to comment and like any posts that they read.
 ![User Stories](https://user-images.githubusercontent.com/109348308/186985455-95e63589-c1ef-4d41-a47d-208e217a666e.png)
 
 # Dependencies
-dotenv, mongoose, bcrypt, express, node
+dotenv, mongoose, bcrypt, express, node, ejs, mongoconnect
 
 # Languages
 HTML, CSS, JavaScript
