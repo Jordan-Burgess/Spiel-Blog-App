@@ -6,6 +6,7 @@ const { PromiseProvider } = require('mongoose');
 require('./config/db.connection');
 
 const blogsController = require('./controllers/blog_controller')
+const commentsController = require('./controllers/comments_controller')
 
 
 require('dotenv').config()
@@ -17,6 +18,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(methodOverride('_method'));
 app.use('/blogs', blogsController);
+app.use('/comments', commentsController);
 
 //Home Route
 app.get('/', (req,res) => {
