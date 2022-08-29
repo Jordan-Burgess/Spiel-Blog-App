@@ -4,7 +4,8 @@
   "description": "Spiel is a Full Crud Blog App that utilizes RESTful routes.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "method-override": "^3.0.0",
-    "mongoose": "^6.5.3"
+    "mongoose": "^6.5.3",
+    "nodemon": "^2.0.19"
   }
 }
