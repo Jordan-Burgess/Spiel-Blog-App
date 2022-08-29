@@ -19,7 +19,7 @@ HTML, CSS, JavaScript
 
 
 # ERD
-![ERD](https://user-images.githubusercontent.com/109348308/186985486-c00bbb3c-ff28-478d-8563-cbbfad106c6a.png)
+![Screen Shot 2022-08-29 at 2 08 55 PM](https://user-images.githubusercontent.com/109348308/187269336-d5bd4f6a-2474-400e-b05f-7cc1cb9486d7.png)
 
 # Wireframes
 
