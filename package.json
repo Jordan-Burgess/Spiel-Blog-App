@@ -1,0 +1,27 @@
+{
+  "name": "spiel-blog-app",
+  "version": "1.0.0",
+  "description": "Spiel is a Full Crud Blog App that utilizes RESTful routes.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jordan-Burgess/Spiel-Blog-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jordan-Burgess/Spiel-Blog-App/issues"
+  },
+  "homepage": "https://github.com/Jordan-Burgess/Spiel-Blog-App#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.5.3"
+  }
+}
