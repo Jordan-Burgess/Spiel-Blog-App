@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const productSchema = new mongoose.Schema({
+const blogSchema = new mongoose.Schema({
         title: {
             type: String,
             required: [true, "title can not be empty"],
@@ -29,6 +29,6 @@ const productSchema = new mongoose.Schema({
 
 }, {timestamps: true,});
 
-const Blog = mongoose.model("Blog", productSchema);
+const Blog = mongoose.model("Blog", blogSchema);
 
 module.exports = Blog;
