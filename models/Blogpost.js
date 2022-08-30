@@ -22,13 +22,12 @@ const blogpostSchema = new mongoose.Schema({
         }, 
         user: {
             type: String,
-            enum: ['male','female'],
-            required: [true, "gender can not be empty"],
+            required: [true, "User can not be empty"],
         }, 
 
         genre: {
             type: String,
-            enum: ['travel','food','tech','design', 'education'],
+            enum: ['male', 'female'],
             required: [true, "gender can not be empty"],
         }, 
 
