@@ -1,5 +1,5 @@
 require("../config/db.connection");
 
 module.exports = {
-    Blogs: require('./Blog')
+    Blog: require('./Blog')
 }
