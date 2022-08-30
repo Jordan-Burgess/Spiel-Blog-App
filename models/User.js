@@ -33,12 +33,3 @@ module.exports = Blog;
       
         
         
-        
-        
-        
-        username: 'tranr5', 
-        name: 'Randy',
-        email: 'tranr5@gmail.com',
-        password: 'password1',
-        gender: 'male',
-        joindate:
