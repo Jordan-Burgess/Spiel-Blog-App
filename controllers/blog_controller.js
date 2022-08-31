@@ -47,8 +47,7 @@ router.get("/", async (req,res) => {
     try{
         const allBlogs = await db.Blog.find()
         const context =  { blogs: allBlogs };
-        console.log(allBlogs)
-        res.render("index.ejs", context);
+        res.render("blogs.ejs", context);
     } catch(err) {
         console.log(err)
         res.redirect('/404')
