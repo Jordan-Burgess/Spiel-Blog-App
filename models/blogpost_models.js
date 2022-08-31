@@ -56,7 +56,7 @@ const blogs =  [
 // 		let deleted = await db.Blog.deleteMany({});
 // 		console.log(deleted)
 // 		// console.log(deleted);
-// 		let reloading = await db.Blog.insertMany(dogs);
+// 		let reloading = await db.Blog.insertMany(blogs);
 // 		console.log(reloading)
 // 	} catch (err) {
 // 		console.log(err);

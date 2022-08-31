@@ -1,9 +1,6 @@
 const mongoose = require('mongoose')
 
 require('dotenv').config()
-// makes env variables available
-
-// console.log(process.env)
 
 const connectionStr = process.env.MONGODB_URI
 
