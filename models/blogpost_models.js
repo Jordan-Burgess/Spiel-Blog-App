@@ -47,6 +47,22 @@ const blogs =  [
         user: 'person6',
         genre: 'education'
     }, 
-]
+];
+
+// const db = require('./index');
+
+// async function reloadData() {
+// 	try {
+// 		let deleted = await db.Blog.deleteMany({});
+// 		console.log(deleted)
+// 		// console.log(deleted);
+// 		let reloading = await db.Blog.insertMany(dogs);
+// 		console.log(reloading)
+// 	} catch (err) {
+// 		console.log(err);
+// 	}
+// }
+
+// reloadData();
 
 module.exports = blogs
