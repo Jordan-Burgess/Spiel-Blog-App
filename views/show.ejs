@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= foundBlog.title %></h1>
+    <p><%= foundBlog.content %></p>
+    <p><%= foundBlog.likes %></p>
+    <form method="POST">
+        <button type="submit">Like Post</button>
+    </form>
+    <p><%= foundBlog.date %></p>
+
+
+    <p>Add Comment:</p>
+    <% for (let i=0; i<foundBlog.comments.length; i++) { %>
+        <p><strong><%= foundBlog.comments[i].user %></strong></p>
+        <p><%= foundBlog.comments[i].content %></p>
+        <p>Likes: <%= foundBlog.comments[i].likes %></p>
+        <form method="POST">
+            <button type="submit">Like Comment</button>
+        </form>
+        <p><%= foundBlog.comments[i].date %></p>
+        <hr>
+    <% } %>
+</body>
+</html>
