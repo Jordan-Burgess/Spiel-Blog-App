@@ -5,7 +5,8 @@ const blogs =  [
         likes: 50,
         date: '08/14/2022',
         user: 'person1',
-        genre: 'travel'
+        genre: 'travel', 
+        id: 0
     },
     {
         title: 'Where to Stay in Medellin: The Best Neighborhoods For Your Visit', 
@@ -13,7 +14,8 @@ const blogs =  [
         likes: 99,
         date: '08/15/2022',
         user: 'person2',
-        genre: 'travel'
+        genre: 'travel', 
+        id: 1
     },
     {
         title: 'Mini Funfetti Cheeesecakes', 
@@ -21,7 +23,8 @@ const blogs =  [
         likes: 432,
         date: '08/16/2022',
         user: 'person3',
-        genre: 'food'
+        genre: 'food', 
+        id: 2
     }, 
     {
         title: 'Sony acquires Savage Game Studios', 
@@ -29,7 +32,8 @@ const blogs =  [
         likes: 340,
         date: '08/17/2022',
         user: 'person4',
-        genre: 'tech'
+        genre: 'tech', 
+        id: 3
     }, 
     {
         title: 'Sony acquires Savage Game Studios', 
@@ -37,7 +41,8 @@ const blogs =  [
         likes: 254,
         date: '08/18/2022',
         user: 'person5',
-        genre: 'design'
+        genre: 'design', 
+        id: 4,
     }, 
     {
         title: 'How Zen Koans Unlock the Gate of Enlightenment', 
@@ -45,7 +50,8 @@ const blogs =  [
         likes: 602,
         date: '08/19/2022',
         user: 'person6',
-        genre: 'education'
+        genre: 'education',
+        id: 5,
     }, 
 ];
 

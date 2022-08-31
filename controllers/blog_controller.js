@@ -31,10 +31,11 @@ router.post('/', async (req,res) => {
 });
 
 //Show Route
-router.get('/:blogIndex', async (req,res) => {
+router.get('/:blogsIndex', async (req,res) => {
     try {
-        const foundBlog = await db.Blogs.findById(req.params.blogIndex)
-        res.render('show.ejs', {blog:foundBlog, id: foundBlog._id})
+        const foundBlog = await db.Blog.findById(req.params.blogsIndex)
+        console.log(foundBlog)
+        res.render("show.ejs", {blog:foundBlog, id: foundBlog._id})
     } catch(err) {
         console.log(err)
         res.redirect('/404')
@@ -48,18 +49,6 @@ router.get("/", async (req,res) => {
         const context =  { blogs: allBlogs };
         res.render("index.ejs", context);
     } catch(err) {
-        console.log(err)
-        res.redirect('/404')
-    }
-});
-
-router.get('/', async (req,res) => {
-    try {
-        const allBlogs = await db.Blog.find({})
-        const context =  {blogs: allBlogs};
-        console.log(allBlogs)
-        res.render('index.ejs', context)
-    } catch (err) {
         console.log(err)
         res.redirect('/404')
     }
