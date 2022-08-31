@@ -33,8 +33,8 @@ const blogpostSchema = new mongoose.Schema({
 
 }, {timestamps: true,});
 
-const Blog = mongoose.model("Blog", blogpostSchema);
+const Blogpost = mongoose.model("Blogpost", blogpostSchema);
 
-module.exports = Blog;
+module.exports = Blogpost;
       
 
