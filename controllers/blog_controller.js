@@ -32,7 +32,8 @@ router.post('/', async (req,res) => {
 //Show Route
 router.get('/:blogIndex', async (req,res) => {
     try {
-        const foundBlog = await db.Blogs.findById(req.params.blogIndex)
+        const foundBlog = await db.Blog.findById(req.params.blogIndex)
+        console.log(foundBlog)
         res.render('show.ejs', {blog:foundBlog, id: foundBlog._id})
     } catch(err) {
         console.log(err)
