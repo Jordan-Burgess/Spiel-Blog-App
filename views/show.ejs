@@ -9,6 +9,8 @@
 <body>
     <h1><%= foundBlog.title %></h1>
     <p><%= foundBlog.content %></p>
+    <p><%= foundBlog.likes %></p>
+    <p><%= foundBlog.date %></p>
 
     <p>Add Comment:</p>
     <% for (let i=0; i<foundBlog.comments.length; i++) { %>
