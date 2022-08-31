@@ -27,10 +27,6 @@ const blogSchema = new mongoose.Schema({
             enum: ['travel','food','tech','design', 'education'],
             required: [true, "title can not be empty"],
         },
-        image: {
-            type: String,
-            required: [true, "image cannot be empty"],
-
 }, {timestamps: true,});
 
 const Blog = mongoose.model("Blog", blogSchema);
