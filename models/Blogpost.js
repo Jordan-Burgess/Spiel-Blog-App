@@ -14,7 +14,6 @@ const blogpostSchema = new mongoose.Schema({
             default: 0,
             min: [0, 'you can not add a negative number'],
             required: [true, "Please Provide A Number."],
-            unique: true,
         },
         date: {
             type: String,

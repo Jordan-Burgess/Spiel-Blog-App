@@ -6,7 +6,7 @@ router.use(express.json());
 
 //Make sure that this is the right file path for models 
 // const blogs = require('../models/blogpost_models.js')
-const db = require("../models/blogpost_models.js")
+const db = require("../models")
 
 //New Route
 router.get('/new', (req, res) => {
