@@ -13,7 +13,8 @@ const blogSchema = new mongoose.Schema({
             type: Number,
             min: [0, 'you can not add a negative number'],
             required: [true, "number can not be empty"],
-        }, 
+        },
+         
         date: {
             type: String,
             required: [true, "date can not be empty"],
@@ -26,8 +27,7 @@ const blogSchema = new mongoose.Schema({
             type: String,
             enum: ['travel','food','tech','design', 'education'],
             required: [true, "title can not be empty"],
-        } 
-
+        },
 }, {timestamps: true,});
 
 const Blog = mongoose.model("Blog", blogSchema);
