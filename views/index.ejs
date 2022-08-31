@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>All Blogs</h1>
+    <p><a href="/blogs/new">Add a new Blog</a></p>
     <% for (let i=0; i<blogs.length; i++) { %>
         <p><strong><%= blogs[i].title %></strong></p>
         <p><%= blogs[i].content.slice(0, 40) %>... <a href="/blogs/<%= blogs[i]._id %>">See More</a></p>
