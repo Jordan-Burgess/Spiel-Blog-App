@@ -1,6 +1,6 @@
 const express = require('express');
 const methodOverride = require('method-override');
-const { PromiseProvider } = require('mongoose');
+// const { PromiseProvider } = require('mongoose');
 // const session = require('express-session')
 // const MongoStore = require('connect-mongo')
 
@@ -11,7 +11,7 @@ require('./config/db.connection');
 const blogsController = require('./controllers/blog_controller')
 
 //Import Controllers 
-const controllers = require('./controllers')
+// const controllers = require('./controllers')
 
 
 require('dotenv').config()

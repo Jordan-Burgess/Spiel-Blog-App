@@ -9,7 +9,6 @@ router.use(express.urlencoded({ extended: false }));
 //Make sure that this is the right file path for models 
 const db = require("../models")
 
-
 //New Route
 router.get('/new', (req, res) => {
     res.render('new.ejs');
@@ -20,7 +19,7 @@ router.post('/', async (req,res) => {
     const createdBlog = req.body;
 
     try {
-        const newBlog = await db.Blogs.create(createdBlog);
+        const newBlog = await db.Blog.create(createdBlog);
 
         console.log(newBlog);
 
@@ -47,8 +46,20 @@ router.get("/", async (req,res) => {
     try{
         const allBlogs = await db.Blog.find()
         const context =  { blogs: allBlogs };
-        res.render("blogs.ejs", context);
+        res.render("index.ejs", context);
     } catch(err) {
+        console.log(err)
+        res.redirect('/404')
+    }
+});
+
+router.get('/', async (req,res) => {
+    try {
+        const allBlogs = await db.Blog.find({})
+        const context =  {blogs: allBlogs};
+        console.log(allBlogs)
+        res.render('index.ejs', context)
+    } catch (err) {
         console.log(err)
         res.redirect('/404')
     }

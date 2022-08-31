@@ -11,11 +11,11 @@ mongoose.connection.on('connected', ()=>console.log(
 ))
 
 mongoose.connection.on('error', (error)=>console.log(
-    `${new Date().toLocaleTimeString()}: MongoDB error encountered...\n ${{error}}`
+    `${new Date().toLocaleTimeString()}: MongoDB error encountered...\n ${error}`
 ))
 
 mongoose.connection.on('disconnnected', ()=>console.log(
     `${new Date().toLocaleTimeString()}: MongoDB disconnected.`
 ))
 
-module.exports = connection
+// module.exports = connection
