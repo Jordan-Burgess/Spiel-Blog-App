@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Create a new blog</h1>
+    <h1>Edit blog</h1>
 
-    <form method="POST">
+    <form action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
         <label for="genre">Choose a genre:</label>
         <select name="genre">
             <% for(let i=0; i<genre.length; i++) { %>
@@ -17,9 +17,9 @@
             <% } %>
         </select>
         <label for="title">Blog Title</label>
-        <input type="text" name="title" required>
-        <textarea>Enter your content</textarea>
-        <button type="submit">Create Blog</button>
+        <input type="text" name="title" value="<%= blog.title %>" required>
+        <textarea><%= blog.content %></textarea>
+        <button type="submit">Submit Changes</button>
     </form>
 </body>
 </html>

@@ -6,7 +6,7 @@ router.use(express.json());
 
 //Make sure that this is the right file path for models 
 // const blogs = require('../models/blogpost_models.js')
-const db = require("../models/blogpost_models.js")
+const db = require("../models")
 
 //New Route
 router.get('/new', (req, res) => {
@@ -18,7 +18,7 @@ router.post('/', async (req,res) => {
     const createdBlog = req.body;
 
     try {
-        const newBlog = await db.Blogs.create(createdBlog);
+        const newBlog = await db.Blog.create(createdBlog);
 
         console.log(newBlog);
 
@@ -43,7 +43,7 @@ router.get('/:blogIndex', async (req,res) => {
 //Index Route
 router.get('/', async (req,res) => {
     try {
-        const allBlogs = await db.Blogs.find()
+        const allBlogs = await db.Blog.find({})
         const context =  {blogs: allBlogs};
         console.log(allBlogs)
         res.render('index.ejs', context)

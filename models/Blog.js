@@ -8,7 +8,8 @@ const blogSchema = new mongoose.Schema({
         content: {
             type: String,
             required: [true, "content can not be empty"],
-        }, likes: {
+        }, 
+        likes: {
             type: Number,
             min: [0, 'you can not add a negative number'],
             required: [true, "number can not be empty"],

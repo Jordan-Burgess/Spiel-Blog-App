@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to Spiel</h1>
+    <h1>All Genres</h1>
+    <% for (let i=0; i<genres.length; i++) { %>
+        <p><%= genres[i] %></p>
+        <p><%= genres[i].blogs.length %> Blogs</p>
+        <hr>
+    <% } %>
 </body>
 </html>
