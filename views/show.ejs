@@ -31,7 +31,13 @@
     </div>
 
 
-    <p class = 'add-comment'>Add A Comment:</p>
- 
+    <p class = 'add-comment'>Add Comment:</p>
+    <% for(let i=0; i<comments.length; i++) { %>
+        <p><%= comments[i].username %></p>
+        <p><%= comments[i].content %></p>
+        <p>Likes: <%= comments[i].likes %></p>
+        <p><%= comments[i].date %></p>
+        <hr>
+    <% } %>
 </body>
 </html>
