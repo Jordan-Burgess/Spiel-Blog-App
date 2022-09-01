@@ -33,8 +33,8 @@ const commentsSchema = new mongoose.Schema({
           },
 }, {timestamps: true,});
 
-const Blog = mongoose.model("Comments", commentsSchema);
+const Comment = mongoose.model("Comments", commentsSchema);
 
-module.exports = Blog;
+module.exports = Comment;
 
 

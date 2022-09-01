@@ -19,10 +19,6 @@ const blogSchema = new mongoose.Schema({
             type: String,
             required: [true, "date can not be empty"],
         }, 
-        user: {
-            type: String,
-            required: [true, "user can not be empty"],
-        }, 
         genre: {
             type: String,
             enum: ['travel','food','tech','design', 'education'],
@@ -31,10 +27,6 @@ const blogSchema = new mongoose.Schema({
         username: {
             type: mongoose.Types.ObjectId,
             ref: "User",
-          },
-        genre: {
-            type: mongoose.Types.ObjectId,
-            ref: "Genre",
           },
 }, {timestamps: true,});
 
