@@ -12,7 +12,7 @@
 // //All Comments Index
 // router.get('/', async (req,res) => {
 //     try {
-//     const allComments = await db.Comments.find().populate('blog').exec()
+//     const allComments = await db.Blog.find().populate('blog').exec()
 //     const allBlogs = await db.Blogs.find()
 //     res.render('comments/index.ejs', { comments: allComments, blogs: allBlogs })
 //     } catch (err) {

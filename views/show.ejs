@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/show.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oleo+Script+Swash+Caps&family=Oswald:wght@200;500&family=Poiret+One&display=swap" rel="stylesheet">
+
+<%- include('partials/head', {page: 'edit'})  %>
+<%- include('partials/nav')  %>
     <title>Document</title>
 </head>
 <body>
     <h1><%= blog.title %></h1>
-    <p><%= blog.content %></p>
-    <p><%= blog.likes %></p>
-    <form method="POST">
-        <button type="submit">Like Post</button>
-    </form>
-    <p><%= blog.date %></p>
+    <img src="<%=blog.img%>" style="max-width: 500px;" />
+    <div class ='blog-info'>
+        <p class = 'blog-date'><%= blog.date %></p> 
+        <p class = 'blog-user'><%=blog.user %></p>
+    </div>
+    <p class = 'blog-content'><%= blog.content %></p>
+    <div class = 'blog-likes'>
+        <p>Likes:   <%= blog.likes %></p>
+        <form method="POST">
+            <button type="submit">Like Post</button>
+        </form>
+    </div>
 
 
-    <p>Add Comment:</p>
+    <p class = 'add-comment'>Add A Comment:</p>
  
 </body>
 </html>
