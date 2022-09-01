@@ -25,11 +25,11 @@ const commentsSchema = new mongoose.Schema({
         }, 
         username: {
             type: mongoose.Types.ObjectId,
-            ref: “”,
+            ref: "User",
           },
           blogPost: {
             type: mongoose.Types.ObjectId,
-            ref: "Blog”,
+            ref: "Blog",
           },
 }, {timestamps: true,});
 

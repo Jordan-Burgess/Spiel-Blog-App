@@ -6,7 +6,7 @@ const genreSchema = new mongoose.Schema({
        },
     blogPost: {
         type: mongoose.Types.ObjectId,
-        ref: "Blog”,
+        ref: "Blog",
       },
 }, {timestamps: true,});
 

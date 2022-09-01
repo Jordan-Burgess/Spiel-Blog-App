@@ -30,11 +30,11 @@ const blogSchema = new mongoose.Schema({
         },
         username: {
             type: mongoose.Types.ObjectId,
-            ref: “User”,
+            ref: "User",
           },
         genre: {
             type: mongoose.Types.ObjectId,
-            ref: "Genre”,
+            ref: "Genre",
           },
 }, {timestamps: true,});
 
