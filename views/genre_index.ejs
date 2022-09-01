@@ -18,7 +18,7 @@
     <div class = 'different-genres'>
     <% for (let i=0; i<genres.length; i++) { %>
         <img class = 'genre-image' src="<%=genres[i].img%>"/>
-        <p><%= genres[i].genre %></p>
+        <p class = 'genre-name'><%= genres[i].genre %></p>
         <a class = 'genre-link' href="/genres/<%=genres[i]._id %>">See More</a>
     <% } %>   </div>
 </body>

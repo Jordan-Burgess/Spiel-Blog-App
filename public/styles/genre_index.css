@@ -11,11 +11,13 @@ h1 {
     font-size: 20px;
     color: black;
     border-radius: 5px;
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
     padding: 0;
+    margin-left: 5%;
+    margin-right: 15%;
     width: 600px;
-    margin-left: 25px;
-    margin-right: 25px;
 }
 
 .genre-link {
@@ -23,23 +25,26 @@ h1 {
     font-size: 20px;
     background-color: navy;
     border-radius: 5px;
-    width: 150px;
+    padding: 10px;
     height: 40px; 
-    line-height: 40px;
+    width: 400px;
+    line-height: 20px;
+    display: inline-flex;
     text-align: center;
     position: relative;
-    transform: translate(-275%,250%);
+    transform: translate(-275%,200%);
 }
 
 .genre-image {
-    height: 150px; 
-    width: 250px;
+    height: 200px; 
+    width: 200px;
     margin-left: -20px;
     margin-right: -20px;
     object-fit: cover;
+    display: inline-flex;
 }
 
-p {
+.genre-name {
     font-size: 25px;
     background-color: white;
     border-radius: 5px;
