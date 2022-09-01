@@ -9,6 +9,7 @@ require('./config/db.connection');
 
 //Controller Imports
 const blogsController = require('./controllers/blog_controller')
+const genresController = require("./controllers/genres_controller")
 
 //Import Controllers 
 // const controllers = require('./controllers')
@@ -37,6 +38,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(methodOverride('_method'));
 app.use('/blogs', blogsController);
+app.use('/genres', genresController)
 
 //Home Route
 app.get('/', (req,res) => {

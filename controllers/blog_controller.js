@@ -11,7 +11,7 @@ const db = require("../models")
 
 //New Route
 router.get('/new', (req, res) => {
-    const genres = require("../models/genre_models")
+    const blogs = require("../models/blogpost_models")
     res.render('new.ejs', {genres});
 });
 
