@@ -17,15 +17,6 @@
 
 
     <p>Add Comment:</p>
-    <% for (let i=0; i<foundBlog.comments.length; i++) { %>
-        <p><strong><%= foundBlog.comments[i].user %></strong></p>
-        <p><%= foundBlog.comments[i].content %></p>
-        <p>Likes: <%= foundBlog.comments[i].likes %></p>
-        <form method="POST">
-            <button type="submit">Like Comment</button>
-        </form>
-        <p><%= foundBlog.comments[i].date %></p>
-        <hr>
-    <% } %>
+ 
 </body>
 </html>
