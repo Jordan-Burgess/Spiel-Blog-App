@@ -16,7 +16,7 @@ const blogsController = require('./controllers/blog_controller')
 
 require('dotenv').config()
 const app = express();
-const PORT = process.env.PORT
+const PORT = 7000;
 app.set('view engine', 'ejs')
 
 //User Sessions
@@ -45,10 +45,10 @@ app.get('/', (req,res) => {
     res.render('home.ejs')
 })
 
-// 404 Not Found 
-app.get('*', (req,res) => {
-    res.render('404')
-})
+// // 404 Not Found 
+// app.get('*', (req,res) => {
+//     res.render('404')
+// })
 
 //Server
 app.listen(PORT, () => {console.log(`Listening on Port: ${PORT}`)});

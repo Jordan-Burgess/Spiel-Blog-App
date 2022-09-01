@@ -3,9 +3,10 @@ const router = express.Router();
 
 router.use(express.json());
 
+router.use(express.urlencoded({ extended: false }));
+
 
 //Make sure that this is the right file path for models 
-// const blogs = require('../models/blogpost_models.js')
 const db = require("../models")
 
 //New Route
@@ -30,11 +31,11 @@ router.post('/', async (req,res) => {
 });
 
 //Show Route
-router.get('/:blogIndex', async (req,res) => {
+router.get('/:blogsIndex', async (req,res) => {
     try {
-        const foundBlog = await db.Blog.findById(req.params.blogIndex)
+        const foundBlog = await db.Blog.findById(req.params.blogsIndex)
         console.log(foundBlog)
-        res.render('show.ejs', {blog:foundBlog, id: foundBlog._id})
+        res.render("show.ejs", {blog:foundBlog, id: foundBlog._id})
     } catch(err) {
         console.log(err)
         res.redirect('/404')
@@ -42,13 +43,12 @@ router.get('/:blogIndex', async (req,res) => {
 });
 
 //Index Route
-router.get('/', async (req,res) => {
-    try {
-        const allBlogs = await db.Blog.find({})
-        const context =  {blogs: allBlogs};
-        console.log(allBlogs)
-        res.render('index.ejs', context)
-    } catch (err) {
+router.get("/", async (req,res) => {
+    try{
+        const allBlogs = await db.Blog.find()
+        const context =  { blogs: allBlogs };
+        res.render("index.ejs", context);
+    } catch(err) {
         console.log(err)
         res.redirect('/404')
     }
