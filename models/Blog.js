@@ -30,8 +30,16 @@ const blogSchema = new mongoose.Schema({
         },
         img: {
             type: String, 
-            required: [true, "Image cannot bee missing"],
+            required: [true, "Image cannot be missing"],
         },
+        username: {
+            type: mongoose.Types.ObjectId,
+            ref: "User",
+          },
+        genre: {
+            type: mongoose.Types.ObjectId,
+            ref: "Genre",
+          },
 }, {timestamps: true,});
 
 const Blog = mongoose.model("Blog", blogSchema);

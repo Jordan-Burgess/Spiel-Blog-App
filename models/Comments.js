@@ -24,6 +24,14 @@ const commentsSchema = new mongoose.Schema({
             type: String,
             required: [true, "post can not be empty"],
         }, 
+        username: {
+            type: mongoose.Types.ObjectId,
+            ref: "User",
+          },
+          blogPost: {
+            type: mongoose.Types.ObjectId,
+            ref: "Blog",
+          },
 }, {timestamps: true,});
 
 const Comments = mongoose.model("Comments", commentsSchema);

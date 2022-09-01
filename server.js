@@ -17,7 +17,7 @@ const usersController = require('./controllers/all_users_controller')
 
 require('dotenv').config()
 const app = express();
-const PORT = 7000;
+const PORT = process.env.PORT;
 app.set('view engine', 'ejs')
 
 //User Sessions
