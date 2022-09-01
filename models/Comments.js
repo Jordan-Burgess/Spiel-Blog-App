@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
-const blogSchema = new mongoose.Schema({
-        title: {
+const commentsSchema = new mongoose.Schema({
+        username: {
             type: String,
-            required: [true, "title can not be empty"],
+            required: [true, "username can not be empty"],
         }, 
         content: {
             type: String,
@@ -19,20 +19,14 @@ const blogSchema = new mongoose.Schema({
             type: String,
             required: [true, "date can not be empty"],
         }, 
-        user: {
+        blogpost: {
             type: String,
-            required: [true, "user can not be empty"],
+            required: [true, "post can not be empty"],
         }, 
-        genre: {
-            type: String,
-            enum: ['travel','food','tech','design', 'education'],
-            required: [true, "title can not be empty"],
-        },
 }, {timestamps: true,});
 
-const Blog = mongoose.model("Blog", blogSchema);
+const Blog = mongoose.model("Comments", commentsSchema);
 
 module.exports = Blog;
 
 
-// use first one in comments
