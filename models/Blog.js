@@ -28,6 +28,14 @@ const blogSchema = new mongoose.Schema({
             enum: ['travel','food','tech','design', 'education'],
             required: [true, "title can not be empty"],
         },
+        username: {
+            type: mongoose.Types.ObjectId,
+            ref: “User”,
+          },
+        genre: {
+            type: mongoose.Types.ObjectId,
+            ref: "Genre”,
+          },
 }, {timestamps: true,});
 
 const Blog = mongoose.model("Blog", blogSchema);
