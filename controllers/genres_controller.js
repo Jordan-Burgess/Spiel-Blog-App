@@ -12,7 +12,7 @@ const db = require("../models")
 //Index Route
 router.get("/", async (req,res) => {
     try{
-        const allGenres = await db.Genre.find()
+        const allGenres = await db.Genres.find()
         const context =  { genres: allGenres };
         res.render("genre_index.ejs", context);
     } catch(err) {

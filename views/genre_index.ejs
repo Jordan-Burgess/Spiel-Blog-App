@@ -9,8 +9,9 @@
 <body>
     <h1>All Genres</h1>
     <% for (let i=0; i<genres.length; i++) { %>
-        <p><%= genres[i] %></p>
-        <p><%= genres[i].genres.length %> Blogs</p>
+        <p><%= genres[i].genre %></p>
+        <a href="/genres/<%=genres[i]._id %>">See More</a>
+
         <hr>
     <% } %>
 </body>
