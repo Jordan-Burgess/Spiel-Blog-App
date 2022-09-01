@@ -1,5 +1,7 @@
 require("../config/db.connection");
 
 module.exports = {
-    Genres: require('./Genre')
+    Blog: require("./Blog"),
+    Comments: require('./Comments'),
+    Genres: require('./Genre'),
 }

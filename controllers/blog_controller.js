@@ -35,7 +35,7 @@ router.post('/', async (req,res) => {
 router.get('/:blogsIndex', async (req,res) => {
     try {
         const foundBlog = await db.Blog.findById(req.params.blogsIndex)
-        const allComments = await db.Comment.find()
+        const allComments = await db.Comments.find()
         res.render("show.ejs", {blog:foundBlog, id: foundBlog._id, comments: allComments})
     } catch(err) {
         console.log(err)
