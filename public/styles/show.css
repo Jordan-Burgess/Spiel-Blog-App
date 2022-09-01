@@ -1,6 +1,11 @@
 img {
-    width: cover;
-
+    width: 80%;
+    height: 300px;
+    display: flex; 
+    align-items: center;
+    object-fit: cover;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 h1 {

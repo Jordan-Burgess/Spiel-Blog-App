@@ -7,7 +7,7 @@ router.use(express.urlencoded({ extended: false }));
 
 
 //Make sure that this is the right file path for models 
-const db = require("../models/User")
+const db = require("../models/users_models")
 
 //Index Route
 router.get("/users", async (req,res) => {
