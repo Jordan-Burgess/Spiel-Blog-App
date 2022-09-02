@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 require('dotenv').config()
 
-const connectionStr = process.env.MONGODB_URI
+const connectionStr = process.env.MONGODB_URI || "YOUR CURRENT LOCALHOST DB CONNECTION STRING HERE"
 
 const connection = mongoose.connect(connectionStr)
 
