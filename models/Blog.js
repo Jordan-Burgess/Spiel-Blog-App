@@ -24,6 +24,10 @@ const blogSchema = new mongoose.Schema({
             enum: ['travel','food','tech','design', 'education'],
             required: [true, "title can not be empty"],
         },
+        img: {
+            type: String, 
+            required: [true, "Image cannot be missing"],
+        },
         username: {
             type: mongoose.Types.ObjectId,
             ref: "User",

@@ -1,23 +1,23 @@
-// const express = require('express');
-// const router = express.Router();
-// const bcrypt = require('bcryptjs')
-// const { User } = require('../models')
+const express = require('express');
+const router = express.Router();
+const bcrypt = require('bcryptjs')
+const { User } = require('../models')
 
-// router.use(express.json());
+router.use(express.json());
 
-// router.use(express.urlencoded({ extended: false}));
-
-
-// //User Login Connection to EJS
-// router.get('/login', (req,res) => {
-//     res.render('users/login.ejs');
-// })
+router.use(express.urlencoded({ extended: false}));
 
 
-// //User Register Connection to EJS
-// router.get('/register', (req,res) => {
-//     res.render('users/register.ejs');
-// })
+//User Login Connection to EJS
+router.get('/login', (req,res) => {
+    res.render('users/login.ejs');
+})
+
+
+//User Register Connection to EJS
+router.get('/register', (req,res) => {
+    res.render('users/register.ejs');
+})
 
 // //User Login Route
 // router.post('/login', async (req,res, next) => {
@@ -78,4 +78,4 @@
 //     }
 // })
 
-// module.exports = router;
+module.exports = router;

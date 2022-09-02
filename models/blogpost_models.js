@@ -1,12 +1,13 @@
 const blogs =  [
     {
         title: 'Is Cancun Safe?', 
-        content: 'Cancún is the most popular city in Mexico for travelers, welcoming almost four million visitors in 2021 (pre-pandemic, in 2019, it was over six million). The second most popular destination, Mexico City, only saw half of that number. With numerous direct flights from various cities in the United States and lovely beaches that hug turquoise waters, it\’s not really a surprise that this city of nearly 900,000 people is so popular.  While the media tends to paint in broad strokes when it comes to Mexico and safety, there are plenty of safe places to travel in Mexico. Cancún is one of them.  It\’s not like San Pedro Sula in Honduras or Ciudad Juárez on the Mexican-US border, where you might encounter robbers or violence just by strolling down the street.  That said, of the most dangerous cities in Mexico, Cancún comes in at number six in terms of the number of homicides per 100,000 people. To put this into perspective, the most dangerous city in Mexico is Tijuana, with 138 murders per 100,000 people. Cancún has 64.  While that may seem worrying, keep in mind that there are several cities in the US with comparable stats (St. Louis had 65 homicides per 100,000 people in 2019; Baltimore saw 58).  Fortunately for travelers, most of the violent crime in Cancún is the result of drug cartels and occurs far from the tourist zones (and rarely involves tourists). The vast majority of travelers will come and go without incident.  But that doesn\’t mean you can travel carelessly here.  To help you understand more about the city and decide if you feel comfortable visiting, here is everything you need to know to stay safe in Cancún.',
+        content: '  Cancún is the most popular city in Mexico for travelers, welcoming almost four million visitors in 2021 (pre-pandemic, in 2019, it was over six million). The second most popular destination, Mexico City, only saw half of that number. With numerous direct flights from various cities in the United States and lovely beaches that hug turquoise waters, it\’s not really a surprise that this city of nearly 900,000 people is so popular. While the media tends to paint in broad strokes when it comes to Mexico and safety, there are plenty of safe places to travel in Mexico. Cancún is one of them.  It\’s not like San Pedro Sula in Honduras or Ciudad Juárez on the Mexican-US border, where you might encounter robbers or violence just by strolling down the street.  That said, of the most dangerous cities in Mexico, Cancún comes in at number six in terms of the number of homicides per 100,000 people. To put this into perspective, the most dangerous city in Mexico is Tijuana, with 138 murders per 100,000 people. Cancún has 64.  While that may seem worrying, keep in mind that there are several cities in the US with comparable stats (St. Louis had 65 homicides per 100,000 people in 2019; Baltimore saw 58).  Fortunately for travelers, most of the violent crime in Cancún is the result of drug cartels and occurs far from the tourist zones (and rarely involves tourists). The vast majority of travelers will come and go without incident.  But that doesn\’t mean you can travel carelessly here.  To help you understand more about the city and decide if you feel comfortable visiting, here is everything you need to know to stay safe in Cancún.',
         likes: 50,
         date: '08/14/2022',
         user: 'person1',
         genre: 'travel', 
-        id: 0
+        id: 0,
+        img: "https://i.imgur.com/TJgyvN7.jpeg",
     },
     {
         title: 'Where to Stay in Medellin: The Best Neighborhoods For Your Visit', 
@@ -15,7 +16,8 @@ const blogs =  [
         date: '08/15/2022',
         user: 'person2',
         genre: 'travel', 
-        id: 1
+        id: 1,
+        img: "https://i.imgur.com/mR6uL7Z.jpeg",
     },
     {
         title: 'Mini Funfetti Cheeesecakes', 
@@ -24,7 +26,8 @@ const blogs =  [
         date: '08/16/2022',
         user: 'person3',
         genre: 'food', 
-        id: 2
+        id: 2,
+        img: "https://i.imgur.com/6yAIJOz.jpeg",
     }, 
     {
         title: 'Sony acquires Savage Game Studios', 
@@ -33,7 +36,8 @@ const blogs =  [
         date: '08/17/2022',
         user: 'person4',
         genre: 'tech', 
-        id: 3
+        id: 3, 
+        img: "https://i.imgur.com/F9MsxFd.jpeg",
     }, 
     {
         title: 'Sony acquires Savage Game Studios', 
@@ -43,6 +47,7 @@ const blogs =  [
         user: 'person5',
         genre: 'design', 
         id: 4,
+        img: "https://i.imgur.com/F9MsxFd.jpeg",
     }, 
     {
         title: 'How Zen Koans Unlock the Gate of Enlightenment', 
@@ -52,6 +57,7 @@ const blogs =  [
         user: 'person6',
         genre: 'education',
         id: 5,
+        img: "https://i.imgur.com/sLRQTVz.jpeg",
     }, 
 ];
 

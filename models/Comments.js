@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const comments = require("./comments_models");
 
 const commentsSchema = new mongoose.Schema({
         username: {
@@ -33,8 +34,8 @@ const commentsSchema = new mongoose.Schema({
           },
 }, {timestamps: true,});
 
-const Comment = mongoose.model("Comments", commentsSchema);
+const Comments = mongoose.model("Comments", commentsSchema);
 
-module.exports = Comment;
+module.exports = Comments;
 
 

@@ -25,4 +25,19 @@ const users =  [
     },
 ]
 
+// const db = require('./index');
+
+// async function reloadData() {
+// 	try {
+// 		let deleted = await db.User.deleteMany({});
+// 		console.log(deleted)
+// 		let reloading = await db.User.insertMany(users);
+// 		console.log(reloading)
+// 	} catch (err) {
+// 		console.log(err);
+// 	}
+// }
+
+// reloadData();
+
 module.exports = users

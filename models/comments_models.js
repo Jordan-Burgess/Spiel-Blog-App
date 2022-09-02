@@ -36,4 +36,19 @@ const comments =  [
     },
 ]
 
+// const db = require('./index');
+
+// async function reloadData() {
+// 	try {
+// 		let deleted = await db.Comments.deleteMany({});
+// 		console.log(deleted)
+// 		let reloading = await db.Comments.insertMany(comments);
+// 		console.log(reloading)
+// 	} catch (err) {
+// 		console.log(err);
+// 	}
+// }
+
+// reloadData();
+
 module.exports = comments
