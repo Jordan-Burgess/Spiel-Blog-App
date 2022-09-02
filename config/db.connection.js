@@ -4,6 +4,8 @@ require('dotenv').config()
 
 const connectionStr = process.env.MONGODB_URI
 
+mongoose.connect( process.env.MONGODB_URI || "mongodb+srv://spiel:spiel@cluster0.rg5icpe.mongodb.net/?retryWrites=true&w=majority" );
+
 const connection = mongoose.connect(connectionStr)
 
 mongoose.connection.on('connected', ()=>console.log(
