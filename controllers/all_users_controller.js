@@ -10,24 +10,24 @@ router.use(express.urlencoded({ extended: false }));
 const db = require("../models/users_models")
 
 //Index Route
-router.get("/users", async (req,res) => {
+router.get("/", async (req,res) => {
     try{
         const allUsers = await db.User.find()
-        console.log(allUsers)
-        const context =  { users: allUsers };
-        res.render("user_show.ejs", context);
+        const context =  { users: alUsers };
+        res.render("user_index.ejs", context);
     } catch(err) {
         console.log(err)
         res.redirect('/404')
     }
 });
 
+
 //Show Route
-router.get('/users/:usersIndex', async (req,res) => {
-    try {
-        const foundUser = await db.User.findById(req.params.usersIndex)
-        console.log(foundUser)
-        res.render("user_show.ejs", {user:foundUser, id: foundUser._id})
+router.get("/:userIndex", async (req,res) => {
+    try{
+        const chosenUser = await db.Blog.find({user: 'person1'})
+        const context =  { users: chosenUser };
+        res.render("user_show.ejs", context);
     } catch(err) {
         console.log(err)
         res.redirect('/404')
