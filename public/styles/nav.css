@@ -2,15 +2,22 @@ body {
     background-color: #000d17;
     color: #f5f4e5;
     font-family: 'Lato', sans-serif;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    width: 100%;
+    margin-left: 0px;
 }
 
 .navbar {
+    background-color: #000d17;
+    color: #f5f4e5;
+    height: 125px;
+    width: 100%;
     display: flex; 
     justify-content: center;
     align-content: stretch;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    margin-top: -175px;
 }
 
 nav {
@@ -22,13 +29,15 @@ li {
     padding-left: 50px;
     padding-right: 50px;
     color: #f5f4e5;
+    font-family:'Special Elite', cursive;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 40px;
     list-style-type: none;
-
 }
 
 a:link {
@@ -44,3 +53,13 @@ a:link {
     font-weight: 900;
     font-size: 20px;
   }
+img {
+    width: 100px;
+    height:100px;
+    margin-bottom: 75px;
+  }
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+}

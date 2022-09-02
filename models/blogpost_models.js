@@ -10,7 +10,7 @@ const blogs =  [
         img: "https://i.imgur.com/TJgyvN7.jpeg",
     },
     {
-        title: 'Where to Stay in Medellin: The Best Neighborhoods For Your Visit', 
+        title: 'Where to Stay in Medellin', 
         content: 'The city of Medellín is hugely popular with travelers and digital nomads (that comes with some problems but that\’s for another post). It\’s the second-largest city in Colombia.  I absolutely love the city. It has a world-class restaurant scene, there\’s plenty of nightlife, it\’s affordable, and there\’s a large digital nomad community so it\’s easy to connect with other travelers and remote workers.  Of course, it wasn\’t always this way. In the 1980s, Medellín was the most dangerous city on the planet, thanks to Pablo Escobar’s infamous drug cartel. But, since then, the murder rate has dropped by an astounding 95%, and the poverty rate has decreased by 66%.  In the last decade, Medellín has been showered with awards due to its rapidly improving infrastructure, public transportation system, and other features that have made the city an extremely livable place. This is not the Medellin of the past.  That said, travelers should still be careful in Medellín — mostly by avoiding the outskirts of town and certain neighborhoods at night where crime can still be an issue. Location is important in Medellín, and that\’s why you have to choose where you stay wisely when looking for accommodation there.  Below, I\’ll show you exactly where to stay in Medellín, so you can plant yourself in the best neighborhood, based on your travel style, budget, and interests.  First, though, let me answer a few frequent questions I get:',
         likes: 99,
         date: '08/15/2022',

@@ -8,27 +8,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oleo+Script+Swash+Caps&family=Oswald:wght@200;500&family=Poiret+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+
+
 
 <%- include('partials/head', {page: 'edit'})  %>
 <%- include('partials/nav')  %>
+
     <title>Document</title>
 </head>
 <body>
     <div class = "title">
         <h1>All Blogs</h1>
     </div>
-    <div class = 'blog-feed'>
+    <div class = 'container'>
     <% for (let i=0; i<blogs.length; i++) { %>
-        <p class = 'blog-headline'><strong><%= blogs[i].title %></strong></p>
-
-        <p class = 'blog-preview'><%= blogs[i].content.slice(0, 40) %>... <a href="/blogs/<%=blogs[i]._id %>">See More</a></p>
-        <p class = 'blog-date'><%= blogs[i].date %></p>
-        <div class ='like-button'>
-            <img src = "https://i.imgur.com/jhXbrUC.png" class = "like-photo">
-            <p class = 'likes'>Likes: <%= blogs[i].likes %></p>
+        <div class = 'image'>
+             <img src = <%= blogs[i].img %> style='width:250px; height:250px; object-fit:cover;'/>
         </div>
-    </div>
-        <hr>
+        <div class = 'blog-info'>
+            <p class = 'blog-headline'><strong><%= blogs[i].title %></strong></p>
+            <p class = 'blog-preview'><%= blogs[i].content.slice(0, 40) %>... <a href="/blogs/<%=blogs[i]._id %>">See More</a></p>
+            <p class = 'blog-date'><%= blogs[i].date %></p>
+        </div>
+        <div class = 'button-container'>
+            <div class ='like-button'>
+                <img src = "https://i.imgur.com/jhXbrUC.png" class = "like-photo">
+                <p class = 'likes'>Likes: <%= blogs[i].likes %></p>
+            </div>
+        </div>
     <% } %>
+</div>
 </body>
 </html>

@@ -15,11 +15,14 @@
 </head>
 <body>
     <h1>All Genres</h1>
-    <div class = 'different-genres'>
+    <div class = "container">
     <% for (let i=0; i<genres.length; i++) { %>
+        <div class = 'different-genres'>
         <p class = 'genre-name'><%= genres[i].genre %></p>
         <img class = 'genre-image' src="<%=genres[i].img%>"/>
         <a class = 'genre-link' href="/genres/<%= genres[i].genre %>">See More</a>
-    <% } %>   </div>
+    </div>
+    <% } %>  
+</div>
 </body>
 </html>
