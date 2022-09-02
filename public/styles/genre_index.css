@@ -1,0 +1,58 @@
+h1 {
+    text-align: center; 
+    color: rgb(94, 227, 218);
+    font-weight: bold;
+    font-size: 50px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.different-genres {
+    font-size: 20px;
+    color: black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    margin-left: 5%;
+    margin-right: 15%;
+    width: 600px;
+}
+
+.genre-link {
+    color: black;
+    font-size: 20px;
+    background-color: navy;
+    border-radius: 5px;
+    padding: 10px;
+    height: 40px; 
+    width: 400px;
+    line-height: 20px;
+    display: inline-flex;
+    text-align: center;
+    position: relative;
+    transform: translate(-275%,200%);
+}
+
+.genre-image {
+    height: 200px; 
+    width: 200px;
+    margin-left: -20px;
+    margin-right: -20px;
+    object-fit: cover;
+    display: inline-flex;
+}
+
+.genre-name {
+    font-size: 25px;
+    background-color: white;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px; 
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+    transform: translate(-200%,25%);
+    color: navy;
+}

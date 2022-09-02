@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/genre_index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oleo+Script+Swash+Caps&family=Oswald:wght@200;500&family=Poiret+One&display=swap" rel="stylesheet">
+
+<%- include('partials/head', {page: 'edit'})  %>
+<%- include('partials/nav')  %>
     <title>Document</title>
 </head>
 <body>
     <h1>All Genres</h1>
+    <div class = 'different-genres'>
     <% for (let i=0; i<genres.length; i++) { %>
-        <p><%= genres[i] %></p>
-        <p><%= genres[i].genres.length %> Blogs</p>
-        <hr>
-    <% } %>
+        <img class = 'genre-image' src="<%=genres[i].img%>"/>
+        <p class = 'genre-name'><%= genres[i].genre %></p>
+        <a class = 'genre-link' href="/genres/<%=genres[i]._id %>">See More</a>
+    <% } %>   </div>
 </body>
 </html>
