@@ -10,9 +10,9 @@ router.use(express.urlencoded({ extended: false }));
 const db = require("../models")
 
 //New Route
-router.get('/new', (req, res) => {
-    const blogs = require("../models/blogpost_models")
-    res.render('new.ejs', {blogs});
+router.get('/new', async (req, res) => {
+    const allGenres = await db.Genre.find()
+    res.render('new.ejs', {genre: allGenres});
 });
 
 //Create route

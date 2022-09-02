@@ -14,7 +14,7 @@
 <%- include('partials/nav')  %>
 </head>
 <body>
-    <h1>Genre</h1>
+    <h1><%= genres.genre %></h1>
     <% for (let i=0; i<genres.length; i++) { %>
         <p><strong><%= genres[i].title %></strong></p>
         <p><%= genres[i].user %></p>

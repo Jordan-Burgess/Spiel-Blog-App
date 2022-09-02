@@ -23,9 +23,11 @@ router.get("/", async (req,res) => {
 });
 
 //Show Route
-router.get("/:genreIndex", async (req,res) => {
+router.get("/:genre", async (req,res) => {
     try{
-        const chosenGenre = await db.Blog.find({genre: "education"})
+        const chosenGenre = await db.Blog.find({genre: `${req.params.genre.toLowerCase()}`})
+        console.log(req.params.genre)
+        console.log(chosenGenre)
         const context =  { genres: chosenGenre };
         res.render("genre_show.ejs", context);
     } catch(err) {
