@@ -17,7 +17,8 @@ const genresController = require("./controllers/genres_controller")
 
 require('dotenv').config()
 const app = express();
-app.listen(process.env.PORT || 7000);
+app.listen(process.env.PORT || 7000)
+const PORT = process.env.PORT || 4000;
 app.set('view engine', 'ejs')
 
 //User Sessions

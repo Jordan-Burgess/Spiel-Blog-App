@@ -6,4 +6,3 @@ module.exports = {
     User: require('./User'),
     Genre: require('./Genre')
 }
-

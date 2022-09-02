@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 require('dotenv').config()
 
-const connectionStr = process.env.MONGODB_URI
+const connectionStr = process.env.MONGODB_URI || "YOUR CURRENT LOCALHOST DB CONNECTION STRING HERE"
 
 mongoose.connect( process.env.MONGODB_URI || `mongodb+srv://spiel:spiel@cluster0.rg5icpe.mongodb.net/?retryWrites=true&w=majority` );
 
