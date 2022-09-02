@@ -13,7 +13,7 @@ const db = require("../models")
 //Index Route
 router.get("/", async (req,res) => {
     try{
-        const allGenres = await db.Genres.find()
+        const allGenres = await db.Genre.find()
         const context =  { genres: allGenres };
         res.render("genre_index.ejs", context);
     } catch(err) {
@@ -23,12 +23,11 @@ router.get("/", async (req,res) => {
 });
 
 //Show Route
-router.get('/:genreIndex', async (req,res) => {
-    try {
-        const foundBlog = await db.Blog.findById(req.params.genreIndex)
-        const allGenres = await db.Genres.find()
-        const allComments = await db.Comments.find()
-        res.render("show.ejs", {blogs:foundBlog, id: allGenres._id, blog: allGenres, comments: allComments,})
+router.get("/:genreIndex", async (req,res) => {
+    try{
+        const chosenGenre = await db.Genre.findById(req.params.genreIndex)
+        const context =  { genres: chosenGenre };
+        res.render("genre_show.ejs", context);
     } catch(err) {
         console.log(err)
         res.redirect('/404')

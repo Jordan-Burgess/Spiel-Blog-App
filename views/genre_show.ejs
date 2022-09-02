@@ -8,12 +8,12 @@
 </head>
 <body>
     <h1>Genre</h1>
-    <% for (let i=0; i<foundBlog.length; i++) { %>
-        <p><strong><%= foundBlog[i].title %></strong></p>
-        <p><%= foundBlog[i].user %></p>
-        <p><%= foundBlog[i].content.slice(0, 40) %>...</p>
+    <% for (let i=0; i<genres.length; i++) { %>
+        <p><strong><%= genres[i].title %></strong></p>
+        <p><%= genres[i].user %></p>
+        <p><%= genres[i].content.slice(0, 40) %>...</p>
         <a>See More</a>
-        <p><%= foundBlog[i].date %></p>
+        <p><%= genres[i].date %></p>
         <hr>
     <% } %>
 </body>
