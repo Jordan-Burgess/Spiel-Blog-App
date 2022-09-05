@@ -1,72 +1,83 @@
-h1 {
-    font-size: 60px; 
-    font-weight: 500px;
-    text-align: center;
-    color: navy;
-    background-color: white;
-    width: 300px;
-    height: 85px;
-    display: inline-block;
-    margin-right: 42%;
-    vertical-align: middle;
-    border-radius: 10px;
-
-}
-
-.title {
-    background-image: url("https://images.unsplash.com/photo-1487611459768-bd414656ea10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
-    height: 200px;
+body {
+    background-image: url("https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left top;
+    background-position: left top;  
 }
 
-.blog-headline { 
-    font-weight: bold; 
+h1 {
+    font-size: 70px; 
+    line-height: 65px;
+    padding: 15px;
+    font-weight: 500px;
+    width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    background-color: grey;
+    position: relative;
+    left: 35%;
+    top: 15%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.image {
+    display: flex;
+    justify-content: flex-start;
+    border: 5px solid white;
+    height: 250px;
+    margin-bottom: 25px;
+    margin-right: 0px;
+}
+
+.blog-info {
+    padding: 10px;
+    border: 5px solid white;
+    height: 230px;
+    background-color: lightgrey;
+    color: black;
+    margin-right: 0px;
+}
+
+.blog-headline {
     font-size: 25px;
-    color: rgb(201, 196, 196);
+    width: 300px;
 }
 
-.blog-feed {
-    margin-left: 20px; 
-}
-
-.blog-preview {
-    color: rgb(174, 205, 255);
-    font-size: 20px;
-}
-
-.blog-date {
-    font-size: 15px; 
-    color: aqua;
+.button-container {
+    height: 250px;
 }
 
 .like-button {
-    background-color: blue; 
+    background-color: rgb(95, 95, 255); 
     width: 130px;
-    height: 20px;
+    height: 50px;
     border-radius: 10px;
-    padding-top: 10px; 
-    padding-bottom: 20px;
-    line-height: 20px;
+    display: inline-flex;
+    position: relative;
+    right: 200%;
+    top: 70%;
 }
-
-.likes {
-    font-size: 15px;
-    font-weight: 500px;
-    color: white;
-    display: inline-block;
-    vertical-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    line-height: 20px;
-} 
 
 .like-photo {
     width: 30px;
     height: 30px;
-    margin: auto;
-    display: inline-block;
-    padding-left: 10px;
+    position: relative;
+    top: 18%;
+    left: 5%;
+}
+
+.likes {
+    position: relative;
+    left: 10%;
+    bottom: 5%;
 }
