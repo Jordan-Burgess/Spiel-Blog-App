@@ -59,10 +59,9 @@ router.get("/", async (req,res) => {
 });
 
 //Destroy/Delete
-router.delete('./productId', async (req,res) => {
+router.delete('/:blogId', async (req,res) => {
     try {
         const foundBlog = await db.Blog.findByIdAndDelete(req.params.blogId)
-        console.log(foundBlog)
         return res.redirect('/blogs');
     } catch(err) {
         console.log(err)

@@ -29,8 +29,12 @@
             <% blog.likes ++ %>
             <button type="submit">Like Post</button>
         </form>
-        <a href="/blogs/<%= blog._id %>/edit">Edit Post</a>
     </div>
+
+    <a href="/blogs/<%= blog._id %>/edit">Edit Post</a>
+    <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">  
+        <input class="button is-danger" type="submit" value="Delete Blog"/>
+    </form>
 
 
     <p class = 'add-comment'>Add Comment:</p>
