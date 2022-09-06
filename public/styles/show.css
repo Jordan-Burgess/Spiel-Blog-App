@@ -1,5 +1,4 @@
-img {
-    width: 80%;
+.blog-image {
     height: 300px;
     display: flex; 
     align-items: center;
