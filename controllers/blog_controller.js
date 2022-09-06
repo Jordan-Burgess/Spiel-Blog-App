@@ -1,6 +1,9 @@
 const express = require('express');;
 const router = express.Router();
 
+const methodOverride = require('method-override')
+router.use(methodOverride('_method'));
+
 router.use(express.json());
 
 router.use(express.urlencoded({ extended: false }));
@@ -56,10 +59,9 @@ router.get("/", async (req,res) => {
 });
 
 //Destroy/Delete
-router.delete('./productId', async (req,res) => {
+router.delete('/:blogId', async (req,res) => {
     try {
-        const foundBlog = await db.Blogs.findByIdAndDelete(req.params.blogId)
-        console.log(foundBlog)
+        const foundBlog = await db.Blog.findByIdAndDelete(req.params.blogId)
         return res.redirect('/blogs');
     } catch(err) {
         console.log(err)
@@ -68,11 +70,11 @@ router.delete('./productId', async (req,res) => {
 });
 
 //Edit Route
-router.get('./blogId/edit', async (req,res) => {
+router.get('/:blogId/edit', async (req,res) => {
     try {
-        const foundBlog = await db.Blogs.findById(req.params.blogId)
-        console.log(foundBlog)
-        res.render('edit.ejs', { blog: foundBlog, id: foundBlog._id})
+        const foundBlog = await db.Blog.findById(req.params.blogId)
+        const allGenres = await db.Genre.find()
+        res.render('edit.ejs', { blog: foundBlog, id: foundBlog._id, genre: allGenres})
     } catch(err) {
         console.log(err)
         res.redirect('/404')
@@ -80,10 +82,22 @@ router.get('./blogId/edit', async (req,res) => {
 });
 
 //Update Route 
-router.put('./blogId', async (req,res) => {
+router.put('/:blogId', async (req,res) => {
     try{
         const updatedBlog = req.body;
-        await db.Blogs.findByIdAndUpdate(req.params.blogId, updatedBlog, {new:true})
+        await db.Blog.findByIdAndUpdate(req.params.blogId, updatedBlog, {new:true})
+        res.redirect(`/blogs/${req.params.blogId}`);
+    } catch(err) {
+        console.log(err)
+        res.redirect('/404')
+    }
+});
+
+router.put('/:blogId/like', async (req,res) => {
+    try{
+        const foundBlog = await db.Blog.findById(req.params.blogId)
+        foundBlog.likes++
+        await db.Blog.findByIdAndUpdate(req.params.blogId, foundBlog, {new:true})
         res.redirect(`/blogs/${req.params.blogId}`);
     } catch(err) {
         console.log(err)

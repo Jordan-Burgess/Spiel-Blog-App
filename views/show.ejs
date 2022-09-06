@@ -23,10 +23,16 @@
     <p class = 'blog-content'><%= blog.content %></p>
     <div class = 'blog-likes'>
         <p class ='number-of-likes'>Likes:   <%= blog.likes %></p>
-        <form method="POST">
+        <form action="/blogs/<%= blog._id %>/like?_method=PUT" method="POST">
+            <% blog.likes ++ %>
             <button type="submit">Like Post</button>
         </form>
     </div>
+
+    <a href="/blogs/<%= blog._id %>/edit">Edit Post</a>
+    <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">  
+        <input class="button is-danger" type="submit" value="Delete Blog"/>
+    </form>
 
 
     <p class = 'add-comment'>Add Comment:</p>
