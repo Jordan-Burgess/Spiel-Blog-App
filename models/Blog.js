@@ -23,6 +23,7 @@ const blogSchema = new mongoose.Schema({
         }, 
         genre: {
             type: String,
+            enum: ['Travel','Food','Tech','Design', 'Education'],
             required: [true, "title can not be empty"],
         },
         img: {
