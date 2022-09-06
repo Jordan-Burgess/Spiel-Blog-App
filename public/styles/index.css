@@ -26,7 +26,7 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-top: 50px;
+    width: 1000px;
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -37,6 +37,7 @@ h1 {
     height: 250px;
     margin-bottom: 25px;
     margin-right: 0px;
+    margin-left: 0px;
 }
 
 .blog-info {
