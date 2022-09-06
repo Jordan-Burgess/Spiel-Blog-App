@@ -1,6 +1,9 @@
 const express = require('express');;
 const router = express.Router();
 
+const methodOverride = require('method-override')
+router.use(methodOverride('_method'));
+
 router.use(express.json());
 
 router.use(express.urlencoded({ extended: false }));
@@ -35,7 +38,7 @@ router.post('/', async (req,res) => {
 router.get('/:blogsIndex', async (req,res) => {
     try {
         const foundBlog = await db.Blog.findById(req.params.blogsIndex)
-        const allComments = await db.Comments.find()
+        const allComments = await db.Comment.find()
         res.render("show.ejs", {blog:foundBlog, id: foundBlog._id, comments: allComments})
     } catch(err) {
         console.log(err)
@@ -58,7 +61,7 @@ router.get("/", async (req,res) => {
 //Destroy/Delete
 router.delete('./productId', async (req,res) => {
     try {
-        const foundBlog = await db.Blogs.findByIdAndDelete(req.params.blogId)
+        const foundBlog = await db.Blog.findByIdAndDelete(req.params.blogId)
         console.log(foundBlog)
         return res.redirect('/blogs');
     } catch(err) {
@@ -70,7 +73,7 @@ router.delete('./productId', async (req,res) => {
 //Edit Route
 router.get('./blogId/edit', async (req,res) => {
     try {
-        const foundBlog = await db.Blogs.findById(req.params.blogId)
+        const foundBlog = await db.Blog.findById(req.params.blogId)
         console.log(foundBlog)
         res.render('edit.ejs', { blog: foundBlog, id: foundBlog._id})
     } catch(err) {
@@ -80,10 +83,10 @@ router.get('./blogId/edit', async (req,res) => {
 });
 
 //Update Route 
-router.put('./blogId', async (req,res) => {
+router.put('/:blogId', async (req,res) => {
     try{
         const updatedBlog = req.body;
-        await db.Blogs.findByIdAndUpdate(req.params.blogId, updatedBlog, {new:true})
+        await db.Blog.findByIdAndUpdate(req.params.blogId, updatedBlog, {new:true})
         res.redirect(`/blogs/${req.params.blogId}`);
     } catch(err) {
         console.log(err)
