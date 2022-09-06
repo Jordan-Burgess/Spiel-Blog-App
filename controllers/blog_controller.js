@@ -71,11 +71,11 @@ router.delete('./productId', async (req,res) => {
 });
 
 //Edit Route
-router.get('./blogId/edit', async (req,res) => {
+router.get('/:blogId/edit', async (req,res) => {
     try {
         const foundBlog = await db.Blog.findById(req.params.blogId)
-        console.log(foundBlog)
-        res.render('edit.ejs', { blog: foundBlog, id: foundBlog._id})
+        const allGenres = await db.Genre.find()
+        res.render('edit.ejs', { blog: foundBlog, id: foundBlog._id, genre: allGenres})
     } catch(err) {
         console.log(err)
         res.redirect('/404')

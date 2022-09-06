@@ -12,21 +12,21 @@ const blogSchema = new mongoose.Schema({
         likes: {
             type: Number,
             min: [0, 'you can not add a negative number'],
+            default: 0,
             required: [true, "number can not be empty"],
         },
          
         date: {
-            type: String,
+            type: Date,
             required: [true, "date can not be empty"],
+            default: Date.now
         }, 
         genre: {
             type: String,
-            enum: ['travel','food','tech','design', 'education'],
             required: [true, "title can not be empty"],
         },
         img: {
             type: String, 
-            required: [true, "Image cannot be missing"],
         },
         username: {
             type: mongoose.Types.ObjectId,
