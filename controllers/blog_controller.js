@@ -93,4 +93,16 @@ router.put('/:blogId', async (req,res) => {
     }
 });
 
+router.put('/:blogId/like', async (req,res) => {
+    try{
+        const foundBlog = await db.Blog.findById(req.params.blogId)
+        foundBlog.likes++
+        await db.Blog.findByIdAndUpdate(req.params.blogId, foundBlog, {new:true})
+        res.redirect(`/blogs/${req.params.blogId}`);
+    } catch(err) {
+        console.log(err)
+        res.redirect('/404')
+    }
+});
+
 module.exports = router;
