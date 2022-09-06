@@ -26,9 +26,8 @@ router.get("/", async (req,res) => {
 router.get("/:genre", async (req,res) => {
     try{
         const chosenGenre = await db.Blog.find({genre: `${req.params.genre.toLowerCase()}`})
-        console.log(req.params.genre)
-        console.log(chosenGenre)
-        const context =  { genres: chosenGenre };
+        const genre = req.params.genre
+        const context =  { genres: chosenGenre, genre: genre };
         res.render("genre_show.ejs", context);
     } catch(err) {
         console.log(err)
