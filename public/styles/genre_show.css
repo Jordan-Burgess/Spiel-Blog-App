@@ -26,18 +26,9 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 1000px;
+    margin-top: 50px;
     margin-left: 5%;
     margin-right: 5%;
-}
-.image {
-    display: flex;
-    justify-content: flex-start;
-    border: 5px solid white;
-    height: 250px;
-    margin-bottom: 25px;
-    margin-right: 0px;
-    margin-left: 0px;
 }
 
 .blog-info {
@@ -54,31 +45,6 @@ h1 {
     width: 300px;
 }
 
-.button-container {
-    height: 250px;
-}
-
-.like-button {
-    background-color: rgb(95, 95, 255); 
-    width: 130px;
-    height: 50px;
-    border-radius: 10px;
-    display: inline-flex;
-    position: relative;
-    right: 200%;
-    top: 70%;
-}
-
-.like-photo {
-    width: 30px;
-    height: 30px;
-    position: relative;
-    top: 18%;
-    left: 5%;
-}
-
-.likes {
-    position: relative;
-    left: 10%;
-    bottom: 5%;
+.see-more {
+    font-weight: bold;
 }
