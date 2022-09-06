@@ -19,7 +19,7 @@
         <p><strong><%= genres[i].title %></strong></p>
         <p><%= genres[i].user %></p>
         <p><%= genres[i].content.slice(0, 40) %>...</p>
-        <a>See More</a>
+        <a href="/blogs/<%= genres[i]._id %>">See More</a>
         <p><%= genres[i].date %></p>
         <hr>
     <% } %>
